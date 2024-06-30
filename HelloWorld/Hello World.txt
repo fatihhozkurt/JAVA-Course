@@ -1,0 +1,1 @@
+//Kodun kendi kendini tamamlayarak paketler içinden önerme yapmasına Intellisense denir

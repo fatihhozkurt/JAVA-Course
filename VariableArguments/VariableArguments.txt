@@ -1,0 +1,1 @@
+//Metod içerisinde int... sayilar dersem 3 nokta sayesinde istediğim kadar değişkeni metoda gönderebilirim.

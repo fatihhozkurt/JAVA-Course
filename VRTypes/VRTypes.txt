@@ -1,0 +1,8 @@
+//Variable type (Primitive etc.): Veri yapısının adı da değeri de Stack bellekte saklanır.
+
+number2 = number1 durumunda sadece number1 içerisindeki değeri number2 ya atar.
+
+//Refferance type (Arrays, objects etc.): Veri yapısının adı referans adı Stack bellekte, değeri Heap bellekte saklanır.
+
+array2 = array1 ya da
+customerManager1 = customerManager gibi durumlarda array1 in adres bilgisini array2 ye atar.

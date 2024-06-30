@@ -1,0 +1,22 @@
+//Static yaptığın ifadeyi başka bir classta newleyemezsin
+
+Utility denen araçları yazarken kullanılır
+
+static yapılan ifade uygulama boyunca bir kez oluşturulur, aynı metod ya da değişken her yerden erişilebilir olur ve uygulama sııfırlanana kadar garbage collector tarafından silinmez.
+
+int static bisey = 5 
+ise bu değişkene static sayesinde erişen başka biri =3 derse 3 olur.
+
+Bir classı newlemeden içindeki static değişkeni veya metodu çağırmak constructor'ı tetiklemez
+
+static{
+işlemler
+}
+
+static olan bir ortamda yukarıdaki static yapıcı bloğunu yazarsan çalışır.
+
+Ana classı static yapaman ama inner class olabilir
+
+Inner classları genellikle gruplandırma amacıyla kullanılır (bir temel class altında grup grup classlar.)
+
+Inner class kullanmak doğru değildir, Single responsibility'i ihlal eder. Bunun yerine CRUDDatabaseHelper ve ConnectionDatabaseHelper gibi 2 farklı sınıf açmak gerekir. 

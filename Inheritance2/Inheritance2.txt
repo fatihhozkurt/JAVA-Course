@@ -1,0 +1,16 @@
+//BaseKrediManager:
+-TarımKrediManager
+-ÖğretmenKrediManager
+Classlarını inherit etmektedir.
+
+KrediUI classında:
+public void hesapla(BaseKrediManager baseKrediManager)
+
+adında bir fonksiyon oluşturursam, main içerisinde bu fonksiyona istediğim kredi tipini göndererek hesaplatmış olurum.
+
+krediUI.hesapla(new ÖğretmenKrediManager())
+krediUI.hesapla(new TarımKrediManager())
+
+böylece yeni bir kredi türü eklendiğinde direkt hesaplamayı yaptırtabilirim.
+
+krediUI.hesapla(new AskerKrediManager())

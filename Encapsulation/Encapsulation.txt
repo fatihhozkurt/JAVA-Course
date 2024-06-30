@@ -1,0 +1,7 @@
+//Private tanımlandığı üst scopeta (genelde class) geçerli demektir.
+
+//Sadece getter yazarsan readonly, sadece setter yazarsan writeonly
+
+//this = benim içerisinde bulunduğum class demek.
+
+Ancak this kullanmak yerine field içerisindeki değişkenlerin başına '_' koy. (_id)

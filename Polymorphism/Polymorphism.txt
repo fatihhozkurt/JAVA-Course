@@ -1,0 +1,5 @@
+//Bir üst sınıf referansının tüm alt sınıf nesnelerini tutabilmesidir. Değişkenliği sağlar. bir üst sınıf referansı ile alt sınıftaki nesnelerin kullanılabilmesine olanak sağlar.
+
+BaseLogger[] logger = new BaseLogger[]{new FileLogger, new DatabaseLogger, new EmailLogger}
+
+şeklinde dizi olarak tutabilirim.

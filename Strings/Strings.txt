@@ -1,0 +1,12 @@
+//Java case sensitive bir dildir. A ile a nın farkını startsWith endsWith gibi şeylerde dikkatle kullan.
+
+message.length()
+message.concat("Sonuna eklendi")
+message.charAt(5)
+message.startsWith("a") (Booleandır)
+message.endsWith(".") (Booleandır)
+
+message.getChars(beginIndex,endIndex,destinationVariable) (0 dan 5 e kadar karakterler değişkenine atmaya çalışırsan, 0 1 2 3 4 üncü karakterleri atar.)
+
+message.indexOf("av") (baştan başlayarak ilk görüldüğü yerin indexini verir)
+message.lastIndexOf('a') (sondan başlayarak..)

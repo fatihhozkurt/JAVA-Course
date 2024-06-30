@@ -1,0 +1,16 @@
+//Tüm oyuncular için bir hesapla sistemi olmalı. BaseGameCalculator abstract bir sınıf olursa, onu inherit eden WomenGameCalculator, MenGameCalculator ve ChildrenGameCalculator sınıfları BaseGameCalculator içerisinde "abstract" olarak tanımlanan fonksiyonu override etmek zorundadır.
+
+@Override = annotation
+
+Base içerisinde hesapla fonksiyonunu default olarak ayarlamak istemiyorsam kullanırım.
+
+Abstract bir classta bir abstract metod olmak zorunda değil.
+
+Base'i gizlemek için de kullanılır.
+
+BaseGameCalculator gameCalculator = new BaseGameCalculator(); yapmana izin vermez. Base i saklamış olursun.
+
+Abstract classlar newlenemez!!! (Ondan bir nesne oluşturamazsın)
+
+BaseGameCalculator gameCalculator = new WomenGameCalculator(); yapılabilir.
+

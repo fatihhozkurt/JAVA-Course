@@ -1,0 +1,11 @@
+//Primitive Types
+boolean = (1 byte)
+char = (2 byte) (unicode)
+
+byte = -127 +127 (1 bytelık veri tutar)
+short = -32 bin + 32 bin (2 byte)
+int = -2 milyar + 2 milyar (4 byte) (default)
+long = -9 +9 kadar yeterli (8 byte) 
+
+float = (4 byte) (24.7F şeklinde kullan)
+double (8 byte) (default for floating point)

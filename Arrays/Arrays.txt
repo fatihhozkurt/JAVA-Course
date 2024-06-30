@@ -1,0 +1,1 @@
+//İkinci yöntemde students dizisi üzerinde gezerek bulunduğu indexe referans adı veriyor. O referans adını kullanarak yazdırma gibi işlemleri yapabilirsin.

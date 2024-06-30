@@ -1,0 +1,1 @@
+//Olabilecek tüm şartlara karşılık veren programlara Defensive Programming denir.

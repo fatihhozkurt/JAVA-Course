@@ -1,0 +1,21 @@
+//Interfaceleri isimlendirirken başına I koy.
+ICustomerDal gibi
+
+Dal = Veri tabanı işlemlerini yazarız
+Data Acces Layer
+
+Interfaceler de abstractlar gibi newlenemez (ondan bir nesne oluşturamazsın)
+ICustomerDal customerDal = new ICustomerDal (x)
+olmas
+
+Ama polymorphism kullanılabilir (abstracttaki gibi)
+
+Katmanlı Mimari:
+-DAL katmanı (veri erişim)
+-Businness katmanı (birine ehliyet verilecek ilk yardımdan 70 almış mı gibi kontroller)
+-UI katmanı
+
+Bu katmanlar arasındaki geçişleri bağımlılıkları önlemek için interfaceler ile yaparız.
+
+Businness katmanıyla DAL katmanı birbirini çağırır.
+Müşterinin adı girilmiş mi veriler doğru mu gibi şeyler businness katmanında yazılır.

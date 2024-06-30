@@ -1,0 +1,11 @@
+//Product classında Product'ın özellikleri tutulur. (Ağırlık + Fiyat + Ad + Renk filan)
+
+//Ancak ProductManager classında Product'ın ekle + sil + güncelle gibi işlemleri bulunur.
+
+//Bir class'ın özellikleri olmasına Field denir.
+
+//SOLID 
+S = Single Responsibility Principle = Bir Class,Metod,If bloğu sadece bir işi yapar.
+
+//Attribute = Özellik (Field içerisindeki)
+//Variable = Değişken

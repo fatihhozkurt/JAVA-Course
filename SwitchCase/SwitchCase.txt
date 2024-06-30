@@ -1,0 +1,3 @@
+//Default, caselerden hiçbiri gerçekleşmezse gerçekleşecek olan senaryodur.
+
+CTRL + Shift + Alt + L ile tüm dosyayı formatlayabilirsin

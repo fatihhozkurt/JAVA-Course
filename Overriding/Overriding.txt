@@ -1,0 +1,3 @@
+//Bir alt bir üst klasta aynı fonksiyon varsa buna override denir. En alttaki fonksiyon istisna durumlar için çalışarak en üsttekini ezer.
+
+Benim bir operasyonumun herkes için aynı olmasını ve override edilememesini istiyorsam "final" ile kullanabilirsin.

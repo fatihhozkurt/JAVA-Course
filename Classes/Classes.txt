@@ -1,0 +1,1 @@
+//Classlar referans tiptir. Ortak operasyonları tutmaya ve gruplandırma yapmaya yarar.
