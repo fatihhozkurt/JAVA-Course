@@ -1,8 +1,7 @@
 public class WomenGameController extends BaseGameController{
 
     @Override
-    public void calculate()
-    {
-        System.out.println("Point: 90");
+    public void calculatePoint() {
+        System.out.println("Points for Women: 95");
     }
 }

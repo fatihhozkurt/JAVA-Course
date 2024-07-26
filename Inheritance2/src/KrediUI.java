@@ -1,7 +1,7 @@
 public class KrediUI {
 
-    public void hesaplaUI(BaseKrediManager baseKrediManager)
+    public void krediHesapla(BaseKrediManager baseKrediManager)
     {
-        System.out.println(baseKrediManager.faizKaysayısı + " ile kredi UI tarafında hesaplandı.");
+        baseKrediManager.hesapla();
     }
 }

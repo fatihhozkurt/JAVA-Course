@@ -1,9 +1,10 @@
 public abstract class BaseGameController {
 
-    public abstract void calculate();
+    public abstract void calculatePoint();
 
-    public final void gameOver()
+    public void gameOver()
     {
-        System.out.println("Game over");
+        System.out.println("Game is over");
     }
+
 }

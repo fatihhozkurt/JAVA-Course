@@ -1,0 +1,6 @@
+Interfaceler class değildir birden fazla yerden implement edilebilir ama newlenemez.
+
+Interfacelerde içi boş metodlar saklarız.
+
+Manager = Şöyle böyle yönetim mevzuları
+Dal = Data Access Layer (Veri tabanı operasyonları)

@@ -1,9 +1,14 @@
 public class CustomerManager{
 
-    BaseDatabaseManager databaseManager;
+    public BaseDatabaseManager _baseDatabaseManager;
+
+    public CustomerManager(BaseDatabaseManager baseDatabaseManager)
+    {
+        _baseDatabaseManager = baseDatabaseManager;
+    }
 
     public void getCustomers()
     {
-        databaseManager.getData();
+        _baseDatabaseManager.getData();
     }
 }

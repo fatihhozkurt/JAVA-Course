@@ -3,15 +3,25 @@
 public class Main {
     public static void main(String[] args) {
 
-        Product product1 = new Product();
-        ProductManager productManager = new ProductManager();
+        Product tv = new Product();
+        Product phone = new Product();
+        ProductManager productManager1 = new ProductManager();
 
-        product1.id = 1;
-        product1.name = "Laptop";
-        product1.description = "Lenovo Ideapad Gaming 3";
-        product1.price = 25000.99;
-        product1.amount = 85;
+        phone.color = "White";
+        phone.category = "Electronics";
+        phone.price = 2000;
+        phone.name = "Samsung Phone";
+        phone.amount = 4;
 
-        productManager.addProduct(product1);
+        tv.color = "Black";
+        tv.category = "Electronics";
+        tv.price = 1000;
+        tv.name = "Samsung TV";
+        tv.amount = 2;
+
+        productManager1.add(tv);
+        productManager1.delete(phone);
     }
 }
+
+

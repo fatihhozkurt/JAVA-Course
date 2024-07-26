@@ -1,3 +1,11 @@
+Her zaman bir base olacak
+
+Customer managerda add delete gibi işlemleri yaptığımda loglasın ama plug and play ile logladığı noktayı değiştirebileyim istiyordum.
+
+CustomerManager constructorında bu sınıfı yaratmak istiyorsa bir baselogger vermesi gerektiğini söyledim.
+
+diğer logger tiplerini buraya gönderip içlerinde override edilmiş metodla log işlemini istediğim yerde tamamlayacağım.
+
 //Bir üst sınıf referansının tüm alt sınıf nesnelerini tutabilmesidir. Değişkenliği sağlar. bir üst sınıf referansı ile alt sınıftaki nesnelerin kullanılabilmesine olanak sağlar.
 
 BaseLogger[] logger = new BaseLogger[]{new FileLogger, new DatabaseLogger, new EmailLogger}

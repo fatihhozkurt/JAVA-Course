@@ -1,0 +1,6 @@
+ArrayList<String> dersem String listesi olur.
+
+Collections.sort(sehirler) sıralama yapar
+
+cities.remove("Bursa"):
+Index değil içerik de verebilirsin

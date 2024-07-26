@@ -1,14 +1,15 @@
 public class CustomerManager {
 
-    ICustomerDal _customerDal;
+    private ICustomerDal _customerDal;
 
     public CustomerManager(ICustomerDal customerDal)
     {
         _customerDal = customerDal;
     }
 
-    public void add()
+    public void addCustomer()
     {
-        _customerDal.Add();
+        _customerDal.addToDatabase();
     }
+
 }

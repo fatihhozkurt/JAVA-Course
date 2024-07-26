@@ -1,4 +1,5 @@
 public interface ICustomerDal {
 
-    void Add();
+    public void addToDatabase();
+
 }

@@ -1,0 +1,13 @@
+LAN KÜTÜPHANE YAZMAYI ÖĞRENİYORUZ LAN
+Kütüphane modül ya da paket olarak adlandırılabilir. Gruplandırmaya yarar.
+
+Paketler yapılıp başka projelerde de kullanılabilir (DAL Katmanı gibi)
+
+Java da hali hazır built-in paketler vardır 
+java.util.Scanner
+util = utility
+
+Paketler import edilmeli
+
+Scanner scanner = new Scanner(System.in);
+String name = scanner.nextLine();

@@ -14,3 +14,6 @@ krediUI.hesapla(new TarımKrediManager())
 böylece yeni bir kredi türü eklendiğinde direkt hesaplamayı yaptırtabilirim.
 
 krediUI.hesapla(new AskerKrediManager())
+
+
+Yani: BaseKrediManager ana olduğu için farklı çocuklar için hesaplama yapmak istiyorsan çocukları onun referansıyla gönderebilirsin.

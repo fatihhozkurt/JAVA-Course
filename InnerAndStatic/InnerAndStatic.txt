@@ -1,8 +1,8 @@
 //Static yaptığın ifadeyi başka bir classta newleyemezsin
 
-Utility denen araçları yazarken kullanılır
+Utilitylerde yani yardımcı araçlarda bir kez oluşturup bir daha oluşturmaya gerek kalmadan kullanmak için static kullanılır. Yine de static kullanımı çok yaygın değildir.
 
-static yapılan ifade uygulama boyunca bir kez oluşturulur, aynı metod ya da değişken her yerden erişilebilir olur ve uygulama sııfırlanana kadar garbage collector tarafından silinmez.
+Customer işin bitince bellekten atılır db de kalır ama bir web uygulamasında validator gibi araçlar sürekli static ile çalışır. Bellek sıfırlanana kadar kapanmaz
 
 int static bisey = 5 
 ise bu değişkene static sayesinde erişen başka biri =3 derse 3 olur.
@@ -10,13 +10,26 @@ ise bu değişkene static sayesinde erişen başka biri =3 derse 3 olur.
 Bir classı newlemeden içindeki static değişkeni veya metodu çağırmak constructor'ı tetiklemez
 
 static{
-işlemler
+ sout Static Constructor
 }
 
-static olan bir ortamda yukarıdaki static yapıcı bloğunu yazarsan çalışır.
+Static olan bir ortamda yukarıdaki static constructor yazarsan bu tetiklenerek çalışır.
 
-Ana classı static yapaman ama inner class olabilir
+Bir ana classı static yapamam ama inner class koyarsam static olmak zorundadır.
 
-Inner classları genellikle gruplandırma amacıyla kullanılır (bir temel class altında grup grup classlar.)
+Inner classları genellikle gruplandırma amacıyla kullanılır (bir temel class altında grup grup classlar.) (DatabaseHelper classı altında 1)crud metodlarının olduğu crud classı ve 2) bağlantının sağlandığı connection classı gibi)
 
 Inner class kullanmak doğru değildir, Single responsibility'i ihlal eder. Bunun yerine CRUDDatabaseHelper ve ConnectionDatabaseHelper gibi 2 farklı sınıf açmak gerekir. 
+
+
+
+Product da ürünün özellikleri ve nitelikleri var
+Product manager ile ürün ekleme silme güncelleme işlemleri yapıyoruz
+Product validator ise ürünün ekleme güncelleme işlemlerinde gereken kurallara uyuyor mu kontrol ediyor
+
+Product managerdan eklenecek ürünü eklerken adı boş mu fiyatı 0 dan küçük mü gibi kontroller yaparken ProductValidator içindeki isValid static metodu kullanılır. Böylece ProductValidator'u newlemeye de gerek kalmaz
+
+
+Inner classlarda gruplandırarak işlem yapmak ana class'ın solid in single responsibility ilkesini çiğnemesine sebep olur.
+
+Böylece CRUDDatabaseHelper ve ConnectionDatabaseHelper olarak 2 farklı class oluşturmalıyıza çıkıyor kapı. (Inner classlar genel olarak kullanılmıyor)

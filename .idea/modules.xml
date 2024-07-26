@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AbstractClasses/AbstractClasses.iml" filepath="$PROJECT_DIR$/AbstractClasses/AbstractClasses.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AbstractDemo/AbstractDemo.iml" filepath="$PROJECT_DIR$/AbstractDemo/AbstractDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Arrays/Arrays.iml" filepath="$PROJECT_DIR$/Arrays/Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Basic.iml" filepath="$PROJECT_DIR$/.idea/Basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CharacterAnalysis/CharacterAnalysis.iml" filepath="$PROJECT_DIR$/CharacterAnalysis/CharacterAnalysis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Classes/Classes.iml" filepath="$PROJECT_DIR$/Classes/Classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ClassesWithAttributes/ClassesWithAttributes.iml" filepath="$PROJECT_DIR$/ClassesWithAttributes/ClassesWithAttributes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Conditions/Conditions.iml" filepath="$PROJECT_DIR$/Conditions/Conditions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Constructor/Constructor.iml" filepath="$PROJECT_DIR$/Constructor/Constructor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DataTypes/DataTypes.iml" filepath="$PROJECT_DIR$/DataTypes/DataTypes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DoWhileLoop/DoWhileLoop.iml" filepath="$PROJECT_DIR$/DoWhileLoop/DoWhileLoop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Encapsulation/Encapsulation.iml" filepath="$PROJECT_DIR$/Encapsulation/Encapsulation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ForLoop/ForLoop.iml" filepath="$PROJECT_DIR$/ForLoop/ForLoop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FriendNumbers/FriendNumbers.iml" filepath="$PROJECT_DIR$/FriendNumbers/FriendNumbers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HelloWorld/HelloWorld.iml" filepath="$PROJECT_DIR$/HelloWorld/HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Inheritance/Inheritance.iml" filepath="$PROJECT_DIR$/Inheritance/Inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Inheritance2/Inheritance2.iml" filepath="$PROJECT_DIR$/Inheritance2/Inheritance2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InnerAndStatic/InnerAndStatic.iml" filepath="$PROJECT_DIR$/InnerAndStatic/InnerAndStatic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InnerAndStatic2/InnerAndStatic2.iml" filepath="$PROJECT_DIR$/InnerAndStatic2/InnerAndStatic2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Interfaces/Interfaces.iml" filepath="$PROJECT_DIR$/Interfaces/Interfaces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InterfacesDemo/InterfacesDemo.iml" filepath="$PROJECT_DIR$/InterfacesDemo/InterfacesDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InterfacesMostCorrect/InterfacesMostCorrect.iml" filepath="$PROJECT_DIR$/InterfacesMostCorrect/InterfacesMostCorrect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Methods/Methods.iml" filepath="$PROJECT_DIR$/Methods/Methods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MultiDimensionalArrays/MultiDimensionalArrays.iml" filepath="$PROJECT_DIR$/MultiDimensionalArrays/MultiDimensionalArrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Overloading/Overloading.iml" filepath="$PROJECT_DIR$/Overloading/Overloading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Overriding/Overriding.iml" filepath="$PROJECT_DIR$/Overriding/Overriding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PerfectNumber/PerfectNumber.iml" filepath="$PROJECT_DIR$/PerfectNumber/PerfectNumber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Polymorphism/Polymorphism.iml" filepath="$PROJECT_DIR$/Polymorphism/Polymorphism.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PrimeNumber/PrimeNumber.iml" filepath="$PROJECT_DIR$/PrimeNumber/PrimeNumber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RecapFirst/RecapFirst.iml" filepath="$PROJECT_DIR$/RecapFirst/RecapFirst.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RecapSecond/RecapSecond.iml" filepath="$PROJECT_DIR$/RecapSecond/RecapSecond.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RecapThird/RecapThird.iml" filepath="$PROJECT_DIR$/RecapThird/RecapThird.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SearchingNumber/SearchingNumber.iml" filepath="$PROJECT_DIR$/SearchingNumber/SearchingNumber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Strings/Strings.iml" filepath="$PROJECT_DIR$/Strings/Strings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SwitchCase/SwitchCase.iml" filepath="$PROJECT_DIR$/SwitchCase/SwitchCase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VRTypes/VRTypes.iml" filepath="$PROJECT_DIR$/VRTypes/VRTypes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VariableArguments/VariableArguments.iml" filepath="$PROJECT_DIR$/VariableArguments/VariableArguments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Variables/Variables.iml" filepath="$PROJECT_DIR$/Variables/Variables.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WhileLoop/WhileLoop.iml" filepath="$PROJECT_DIR$/WhileLoop/WhileLoop.iml" />
+    </modules>
+  </component>
+</project>

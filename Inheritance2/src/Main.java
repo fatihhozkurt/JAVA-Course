@@ -4,8 +4,9 @@ public class Main {
     public static void main(String[] args) {
 
         KrediUI krediUI = new KrediUI();
-        krediUI.hesaplaUI(new TarımKrediManager());
-        krediUI.hesaplaUI(new ÖğretmenKrediManager());
-        krediUI.hesaplaUI(new AskerKrediManager());
+
+        krediUI.krediHesapla(new ÖğretmenKrediManager());
+        krediUI.krediHesapla(new TarımKrediManager());
+        krediUI.krediHesapla(new AskerKrediManager());
     }
 }

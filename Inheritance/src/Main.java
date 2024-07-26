@@ -8,13 +8,15 @@ public class Main {
         Customer customer = new Customer();
         CustomerManager customerManager = new CustomerManager();
         Person person = new Person();
+        PersonManager personManager = new PersonManager();
 
-        System.out.println("Customer: ");
-        System.out.println(customer.name);
+        System.out.println(employee.name);
+
+
+        System.out.println("Customer: " + customer.name);
         customerManager.add();
 
-        System.out.println("Employee: ");
-        System.out.println(employee.name);
-        employeeManager.add();
+        System.out.println("Employee: " + employee.name);
+        employeeManager.delete();
     }
 }

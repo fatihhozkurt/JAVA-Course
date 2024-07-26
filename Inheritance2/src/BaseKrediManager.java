@@ -1,4 +1,10 @@
 public class BaseKrediManager {
 
-    double faizKaysayısı = 0.5;
+    float faiz = 2.95F;
+
+
+    public void hesapla()
+    {
+        System.out.println(faiz + " oranı ile hesaplandı.");
+    }
 }

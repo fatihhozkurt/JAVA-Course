@@ -1,0 +1,30 @@
+Olmazsa olmaz kadar önemli bir yapıymış
+
+Dizilerde yeni bir eleman eklemek istediğin zaman outofbounds almadan ya da diziyi newleyip eskisini çöpe atmadan bunu yapmanın bir yolu yok.
+
+Koleksiyonlar arka planda dizileri yöneterek böyle şeylere imkan verirler. Dizilerin geliştirilmiş halidir
+
+ArrayList sayilar = new Arraylist();
+
+şeklinde newledikten sonra:
+
+sayilar.add(10); ile 10 u eklersin
+
+Ancak tip bağımsızdır ve senden obje ister
+Yani:
+
+sayilar.add("Fatih") yapabilirim.
+sayilar.get(3) 3.indexi oku
+sayilar.set(0,100) 0.indexi 100 ile değiştirdi
+sayilar.clear(); her şeyi siler
+sayilar.remove(0); 0.indexteki elemanı sil
+
+!!0.indexteki elemanı remove edince dizi sola kayar.
+
+Tipi yoktur. İçinde tutulan her şey objedir:
+for(Object i : sayilar)
+{
+sout(i);
+}
+
+ArrayListleri tip güvenli yapmak gerekir. Int Arraylisti gibi

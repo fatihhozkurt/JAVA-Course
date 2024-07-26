@@ -1,43 +1,50 @@
 public class CalculatorManager {
 
-    public int addition(int... numbers) {
-        int total = 0;
+    public int sum(int... numbers)
+    {
+        int result = 0;
 
-        for (int numberIndex : numbers) {
-            total += numberIndex;
+        for (int numbersComponents : numbers)
+        {
+            result += numbersComponents;
         }
 
-        return total;
+        return result;
     }
 
-    public int subtraction(int... numbers) {
-        int total = 0;
+    public int sub(int... numbers)
+    {
+        int result = 0;
 
-        for (int numberIndex : numbers) {
-            total -= numberIndex;
+        for (int numbersComponents : numbers)
+        {
+            result -= numbersComponents;
         }
 
-        return total;
+        return result;
     }
 
-    public double division(int... numbers) {
-        double total = 1.0;
+    public float div(int... numbers)
+    {
+        float result = 0.0F;
 
-        for (int numberIndex : numbers) {
-            total /= numberIndex;
+        for (int numbersComponents : numbers)
+        {
+            result /= numbersComponents;
         }
 
-        return total;
+        return result;
     }
 
-    public double multiplication(int... numbers) {
-        double total = 1.0;
+    public int mul(int... numbers)
+    {
+        int result = 1;
 
-        for (int numberIndex : numbers) {
-            total *= numberIndex;
+        for (int numbersComponents : numbers)
+        {
+            result *= numbersComponents;
         }
 
-        return total;
+        return result;
     }
-
 }

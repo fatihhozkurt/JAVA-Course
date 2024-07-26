@@ -1,0 +1,5 @@
+Classları ArrayListlerde tutuyoruz. O classtan oluşturulan her referansa ait isimleri hemen çekmek için mesela.
+
+ArrayList<Customer> customers = new Arraylist<Customer>();
+
+customers.add(new Customer(1,Fatih,Özkurt));

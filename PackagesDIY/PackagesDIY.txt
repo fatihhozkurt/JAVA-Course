@@ -1,0 +1,17 @@
+Paketler harbiden sadece gruplandırmak için kullanılıyor 
+
+Matematik (Paket):
+-Dörtİşlem (Class)
+-Trigonometri(Class)
+-İntegral (Class)
+
+
+!!! Başka paketten gelen classları newlemen gerekiyor.
+
+Dortİşlem dortIslem = new DortIslem();
+
+import matematik.DortIslem;
+yerine
+import matematik.*; koyarsan paketteki her şeyi getirir
+
+Kurumsalda DAL, UI, Businness gibi katmanları ayırmak için kullanılır.

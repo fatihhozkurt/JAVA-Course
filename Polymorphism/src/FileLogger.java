@@ -1,6 +1,7 @@
 public class FileLogger extends BaseLogger {
 
-    public void log(String message) {
-        System.out.println("Logged by FileLogger: " + message);
+    public void log(String logMessage) {
+        System.out.println("Logged to File : " + logMessage);
     }
+
 }

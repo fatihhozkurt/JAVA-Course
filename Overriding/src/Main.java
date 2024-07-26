@@ -3,7 +3,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        BaseKrediManager[] baseKrediManagers = new BaseKrediManager[]{new BaseKrediManager(), new TarimKrediManager(), new OgrenciKrediManager(), new OgretmenKrediManager()};
+        BaseKrediManager[] baseKrediManagers = new BaseKrediManager[]{new TarimKrediManager(), new OgrenciKrediManager(), new OgretmenKrediManager()};
 
         for(BaseKrediManager baseKrediManager: baseKrediManagers)
         {

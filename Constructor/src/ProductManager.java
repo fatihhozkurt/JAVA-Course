@@ -1,14 +1,17 @@
 public class ProductManager {
 
-    public String add(Product product) {
-        return product.getName() + " added.";
+    public void add(Product product)
+    {
+        System.out.println(product.get_name() + " added");
     }
 
-    public String delete(Product product) {
-        return product.getName() + " deleted.";
+    public void delete(Product product)
+    {
+        System.out.println(product.get_name() + " deleted");
     }
 
-    public String update(Product product) {
-        return product.getName() + " updated.";
+    public void update(Product product)
+    {
+        System.out.println(product.get_name() + " updated");
     }
 }
