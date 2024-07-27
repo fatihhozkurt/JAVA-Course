@@ -1,0 +1,13 @@
+Bildiğin mapping işlemi
+a yazınca karşılık olarak b gelmesi
+a = key 
+b = value
+
+
+for(String item : sozluk.keySet())
+{
+sout("Eleman" + item + "Değer" + get(item))
+}
+
+keySet keyleri verir
+get ile de value ları alırsın

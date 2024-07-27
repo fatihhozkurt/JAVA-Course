@@ -1,0 +1,19 @@
+Try-Catch ile yönettiğimiz hatalar kod yazım sırasında aldığımız hatalar değil, uygulama compile edilirken aldığımız hatalardır.
+
+Data dinamiktir, her zaman aynı veriyi vermez. Hatta bazen hiç vermez. Bunları düşün
+
+try kodu dener, hata varsa hata mesajını parametre olarak catchte bulunan referansa atar ve catch bloğu çalışır.
+
+Ancak hangisi çalışırsa çalışsın finally kesinlikle çalışır.
+
+Veri tabanına bağlandık ve hata oluştu. O bağlantıyı hata alsan da almasan da işin bittikten sonra her türlü kapatmamız gerekir. Finally kullanılır.
+
+
+
+
+Exceptionlar kodlarımız ile kontrol altında tutabildiğimiz şeylerdir. (IO Exception, AWT Exception gibi)
+Errorlar ise kodlarımız ile kontrol altında tutamadığımız şeylerdir. (IO Error, VM Error, AWT Error gibi)
+
+Runtime exceptionlar unchecked exceptionlardır. Java kontrol etmez biz etmeliyiz.
+
+Tüm exceptionlar bir ana exception tarafından inherit edilir.
