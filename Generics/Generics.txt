@@ -1,0 +1,6 @@
+ÇOK ÖNEMLİ
+Hangi tipte çalıştığını bilmek ister Java 
+
+Genericlerle birbirine benzeyen yapıları tutarız.
+
+Tasarım deseni: 

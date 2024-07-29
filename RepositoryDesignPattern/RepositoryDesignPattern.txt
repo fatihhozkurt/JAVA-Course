@@ -1,0 +1,45 @@
+GENERIC = <>
+
+Repository deseni her zaman veri tabanı işlemleri (ekleme select silme update gibi için kullanılır.
+
+Ben veri tabanına:
+-add
+-void
+-delete işlemleri yapacağım.
+
+Ancak ekleyeceğim şey:
+-String
+-Customer
+-Product gibi farklı tipteki veriler olabilir.
+
+Ben CustomerDAL classı oluşturup Customer veri tabanı işlemleri için implement edersem:
+-add
+-delete
+-update gibi işlemler farklı,
+
+Product işlemleri farklı tipte metod parametresi alır.
+
+Genericler sayesinde interfacede genel bir tip belirtmeye gerek kalmaz.
+
+Onu implement eden sınıflar da generic kullanarak hangi sınıf için yazıldığını belirtir ve onun tipini alır.
+
+Customer ve Product veri tabanı nesnesiyken Validator veri tabanı işlemi gerektirmediği için veri tabanı nesnesi değildir.Generic içerisine yanlışlıkla veri tabanı nesneleri dışında bir şey yazılmasını engellemek için generic constraint (generic kısıt) kullanılır.
+
+IEntity diye bir interface açıp veri tabanı nesnelerinin onu implement etmesini sağlar,
+
+Ardından IEntityRepo içerisinde generic içerisinde T extends IEntity dersem. IEntityRepo'yu implement eden nesneler sadece IEntity'i implement eden veri tabanı nesnelerini tip olarak kullanabilir.
+
+Entity veri tabanı nesnesi anlamına gelir
+
+Böylece IEntity sayesinde gruplamış da oluyoruz
+
+
+Generic Metodlarda ise 
+
+public <T> void validator(T entity)
+diyerek gönderdiğimiz tipin ne olduğu fark etmeksizin parametre alan bir generic metod oluşturabilirim.
+
+hatta
+
+<T extends IEntity>
+diyerek bunun sadece veri tabanı sınıflarını almasını sağlayabilirim.

@@ -1,0 +1,15 @@
+Bağlantı oluştururken o veri tabanına erişecek kullanıcı bilgilerine ihtiyacımız var. Driver metodunda istenen parametrelerdir.
+
+static String user = "root";
+static String password = "1868798";
+static String dbUL = "jdbc:myql://localhost:3306/world";
+
+(main metodundan önce yaz)
+
+db bağlantısı oluşturmak için connectorJ yani driver kullanılır.
+
+Connection sınıfı çağrıldıktan sonra try catch ile yönetilir
+
+connection = DriverManager.getConnection(user,password,dbURL);
+
+getErrorCode ile exception hata kodu alınır

@@ -1,0 +1,11 @@
+Threadlerle çalışabilmek için ilgili sınıfın Runnable interfaceini implement ediyor olması gerekiyor
+
+Run metodu içerisine ne yazarsan thread şeklinde çalışacaktır
+
+Threadleri kullanmak istiyorsan isimlerini ayırmalısın
+
+!BİR CLASSI ÇALIŞTIRABİLMEK İÇİN ONU NEWLEMEN GEREKİR
+
+new Thread(thread classı(buysa this), threadName)
+
+Olm direkt thread.run() diyince de olurmuş da.

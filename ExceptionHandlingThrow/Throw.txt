@@ -1,0 +1,12 @@
+Yaptığım bir paketi başka yerde kullanacağım ya da kullanacakları zaman hatayı ona (paketin kullanılacağı yere)fırlatmaya yarıyor.
+
+Kendi exception'ını yaz.
+
+Bunun için bir class oluştur ve extends Exception ile inherit et
+
+Başka bir yerde try-catch yapılması için throw fırlatıyorsan metodun adının yanına throws ExceptionTürü yaz.
+
+if para çekmeye yeterli mi kontrol et
+else throw new exception
+
+maindeki exception.getMessage ile throw new Exception("Mesaj") içerisindeki mesaj alınarak fırlatılır.

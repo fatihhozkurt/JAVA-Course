@@ -1,0 +1,23 @@
+Dosyalarla çalışmak için gerekli olan kütüphaneleri kullanacağız
+
+File file new File(pathname)
+
+file.creatFile(); dosya oluşturur.
+
+Try-catch dosyanın oluşup oluşmadığını tekrar üzerine oluşturulması gibi durumları kontrol etmez. Dosya oluşturma sırasında bir hata olursa (IOException) diye vardır.
+
+creatFile() metodu dosya oluşursa 1, oluşmazsa 0 döner. Bu sayede if else ile kontrol edebiliriz.
+
+BufferedReader önbelleğe alır
+Almadan okumak için scanner kullan
+
+readLine yerine hasNextLine yani satır varsa
+
+file okuyorsan while Allahın emri
+
+dosyaları kapatmayı unutma
+
+Diğer tüm işlemlerde File, yazma işleminde FileWriter ile BufferedWriter kullan çünkü kalıcı
+
+FileReader(path,append)
+append üzerine yazma değil sona ekleme yapar 
