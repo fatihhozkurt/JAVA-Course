@@ -1,0 +1,31 @@
+select işleminde:
+
+-connection aç
+-statement = connection.createStatement
+ile statement yarat
+-resultSet = statement.executeQuery(sql)
+ile sql i çalıştır
+-resultSet.getString(colName)
+ile istediğin columnu getir
+
+iken
+
+insert işleminde Statement yerine PrepareStatement kullanılır, resultSet yoktur:
+
+-connection aç
+-statement = connection.prepareStatement(sql)
+ile statement hazırla
+-statement.executeUpdate()
+ile sql i çalıştır.
+
+Ben ifadeyi executeQuery veya prepareStatement içerisinde öyle dümdüz yazınca sürekli string ifade girilmesi gerekir ve kullanıcıdan da alamayız.
+
+- String sql = insert ... values (?,?,?,?)
+ile değer gelecek deriz
+- connection.prepareStatement(sql)
+ile kodu direkt yazman yerine sql değişkenindenden çekeriz
+- statement.setString(1,"Düzce")
+  statement.setString(2,"TUR")
+  …
+  statement.setInt(4,70000)
+ile de farklı tipteki değerleri set ederiz

@@ -1,0 +1,2 @@
+resultSet direkt name olarak yazılmaz da gelen result set bir nesne listesini içerisine atılır ki listeyi istediğimiz gibi yazabilelim.
+

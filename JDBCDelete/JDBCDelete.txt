@@ -1,0 +1,2 @@
+Sorgu dışında bir şey değişmiyor.
+Bu arada ? parametresini sadece içerikte kullanabiliyorsun.

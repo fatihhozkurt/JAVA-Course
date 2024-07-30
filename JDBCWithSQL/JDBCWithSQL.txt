@@ -1,0 +1,18 @@
+SQL sorgularına Statement denir ve Statement classı tarafından yönetilir. Sorguları çalıştırırız.
+
+ResultSet classından da sorgunun sonucunda gelen data alınır.
+
+Birden fazla db bağlantın olabilir. Hangi bağlantıya sorgu açtığını:
+
+statement = referansBağlantı.createStatement();
+
+ile karar ver.
+
+Hangi sonucu çekeceğine de statementa göre karar ver.
+
+resultSet = referansStatement.executQuery("select cart curt");
+
+while(resultSet.next()) -> next varsa
+{
+sout(resultSet.getString("Name"))
+}
