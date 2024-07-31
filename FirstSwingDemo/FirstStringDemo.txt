@@ -1,0 +1,12 @@
+Her component aslında bir classtır.
+
+private javax.swing.JButton jbutton1;
+
+demek javax.swing.JButton türünde bir jbutton1 değişkeni oluştur demektir.
+
+Formdaki componentlere koddan erişirsin.
+
+ActionPerformed butona tıklandığında gelen eventtir.
+
+özelliklerin set ve get özellikleri vardır
+setText
