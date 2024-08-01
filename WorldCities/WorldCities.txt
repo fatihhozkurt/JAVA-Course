@@ -1,0 +1,34 @@
+Her ArrayList<Citites> içine eklenen bir kayıt, yeni bir şehir (City) olacak.
+
+JTable lar DefaultTableModel le çalışır.
+
+model = (DefaultTableModel)tblCities.getModel();
+
+ile bu modelin tblCities'in bir modeli olduğunu belirtmemiz gerekiyor
+
+Jlist de bu setModel(model) ile kullanılıyordu.
+
+model'i getCitiesten elen atayla doldurmak gerek.
+
+public Demo() içerisinde,
+ArrayList<City> cities = getCities();
+ile şehirleri tuttuğumuz cities'i yeni cities'e atayarak,
+
+Uygulama açıldığı an verilerin gelmesini ve yeni ArrayList olan cities'e dolmasını sağlıyorum.
+
+Eski getCities metodu throws SQLException olsaydı, demo içerisinde try catch kullanmamız gerekecekti
+
+yeni arraylist olan ve şehir datalarını tutan cities'i modele aktarmamız lazım.
+
+bunun için mode.addRow(); kullanacağız ama:
+- addRow metodu her seferinde sadece 1 satır ekliyor,
+- addRow metodu parametre olarak verilerin sıralı olduğu bir Object[] arrayi istiyor.
+
+City türündeki cities arraylistinin her satırını gezmek ve her satırı modele aktarmak için:
+
+for(City citiesIndex : cities)
+{
+
+}
+
+oluşturuyorum

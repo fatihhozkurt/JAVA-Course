@@ -1,0 +1,34 @@
+Java uygulaması ile veri tabanları arasındaki yönetimi sağlayan kütüphanedir (yani pakettir).
+
+JDBC nin önüne bağlantı sağlanması için kullanacağın veri tabanının driver'ı yüklenir. Bazen birden fazla.
+
+MySQL oraclemış.
+
+SFW işlemleri.
+
+select * from where continent = 'Asia'
+
+id genelde oto verilir
+
+create schema world;
+create table cities;
+
+insert into cities (id,name) values (1,"Ankara");
+
+select *
+from cities
+where cities.name = "Ankara"
+
+update cities set name = "İstanbul" where name = "Ankara";
+
+//Böyle bir durumda mysql seni korur.
+
+Başına SET SQL_SAFE_UPDATES = 0; koy
+
+id'sinden güncelleseydik sorun çıkmazdı.
+
+delete from city where = id = 1080;
+kayıt siliyor.
+
+File -> Project Structure -> Dependencies -> Program Filex x86 -> MySQL -> Connector -> JAR seçerek:
+- JDBC ile veri tabanı arasındaki geçişi sağlayan paketleri içeren connector J yi ekle.

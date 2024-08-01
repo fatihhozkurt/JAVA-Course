@@ -10,6 +10,7 @@ public class Main {
         DBHelper dbHelper = new DBHelper();
         PreparedStatement preparedStatement = null;
 
+
         try {
             connection = dbHelper.getConnection();
             System.out.println("Connected");

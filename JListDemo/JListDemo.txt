@@ -1,0 +1,14 @@
+Listedeki modeli değiştirmek için
+DefaultListModel classını newlemen ve import etmen gerekiyor.
+
+lstStudents.setModel(model)
+
+diyerek modeli kaydedip
+
+Böylece içeriği
+-model.add
+-model.removeAt
+-model.addElement
+-model.remove
+
+gibi değiştirebilirsin.

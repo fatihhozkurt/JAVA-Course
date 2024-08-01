@@ -1,0 +1,8 @@
+TableRowSorter classı kullanılır.
+keyRelaesed eventi kullanılır.
+
+tblCities.setRowSorter(sorter)
+ile hangi tablonun aranacağı
+
+sorter.setRowFilter(RowFilter.regexFilter(searckey))
+ile hangi kelimenin aranacağı bulunur.
