@@ -3,7 +3,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        int i = 11;
+        int i = 0;
 
         do {
             System.out.println("Do While Activity Logged.");

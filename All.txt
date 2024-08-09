@@ -1,0 +1,69 @@
+DATA TYPES
+
+- Boolean 1 byte
+- Char 2 byte
+- Int 4 byte
+- Float 4 byte
+- Double 8 byte
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+STRING OPERATIONS
+
+- message.length(): String uzunluğu
+- message.toUpperCase, message.toLowerCase
+- message.concat("Sonuna bu metni ekle")
+- message.charAt(6)
+- message.replace(' ','.')
+- message.startsWith("Bugün")
+- message.endsWith
+- message.lastIndexOf('eşek'): Eşek stringinin geçtiği son indexi verir
+- message.firstIndexOf
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+METHODS
+
+public int method(int... sayilar) ile istediğin kadar parametre gönderebilirsin
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DATA TYPES
+
+- Primitive Type: Int, String etc.
+- Refferance Type: Array, Object etc.
+Referans tipinde array1 = array2 yaparsan array1'in HEAP bellekte gösterdiği konumu array2'nin konumuyla aynı yapar. (Atama yapmaz)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CLASSES
+
+- Product classında field tutulurken,
+- ProductManager classında add, delete, update gibi işlemler,
+- DBHelper classında ise veri tabanına bağlanmak için gerekli bilgiler ve metotlar tutulur
+
+SOLİD -> S: Single Responsibility: Bir class, metot, if koşulu gibi yapılar sadece bir işten sorumlu olmalıdır.
+
+Main*
+productManager.add(product)
+
+ProductManager
+public void add(Product product)
+sout(product.getName)
+
+ile bir müşteri nesnesini metoda gönderebiliriz
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ENCAPSULATION
+
+Sadece getter yazarsam readonly olur.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Inheritance
+
+Customer ve Employee sınıflarının name,surname gibi ortak değişkenleri var. Bunları Person sınıfında tutup onlara özel değişkenleri ve metotları kendi sınıflarında tutmak inheritance örneğidir.
+
+- public void krediHesapla(BaseKrediManager) metoduna
+- krediHesapla(new ÖğretmenKrediManager) gönderirsen miras olduğu için çalışır ve ÖğretmenKrediManager bilgileriyle çalışır
