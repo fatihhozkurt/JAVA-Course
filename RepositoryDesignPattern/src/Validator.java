@@ -1,8 +1,8 @@
 public class Validator {
 
-    public <T extends IEntity> void validate(T entity)
+    public static <T extends IEntity> void validator(T entity)
     {
-        System.out.println();
+
     }
 
 }

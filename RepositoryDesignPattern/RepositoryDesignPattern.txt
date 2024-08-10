@@ -1,10 +1,10 @@
 GENERIC = <>
 
-Repository deseni her zaman veri tabanı işlemleri (ekleme select silme update gibi için kullanılır.
+Repository deseni her zaman veri tabanı işlemleri (ekleme select silme update gibi) için kullanılır.
 
 Ben veri tabanına:
 -add
--void
+-update
 -delete işlemleri yapacağım.
 
 Ancak ekleyeceğim şey:

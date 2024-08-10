@@ -7,24 +7,21 @@ public class Main {
     public static void main(String[] args) {
 
         Connection connection = null;
+        PreparedStatement statement = null;
         DBHelper dbHelper = new DBHelper();
-        PreparedStatement preparedStatement = null;
+
+        String sql = "insert into city (Name,CountryCode,District) values (?,?,?)";
 
         try {
             connection = dbHelper.getConnection();
-            System.out.println("Connected");
 
-            String sqlQuery = "insert into city (Name,CountryCode,District,Population) values (?,?,?,?)";
-            preparedStatement = connection.prepareStatement(sqlQuery);
+            statement = connection.prepareStatement(sql);
 
-            preparedStatement.setString(1,"Bongomya");
-            preparedStatement.setString(2,"TUR");
-            preparedStatement.setString(3,"East Anatolia");
-            preparedStatement.setInt(4,80000);
+            statement.setString(1,"Adalar");
+            statement.setString(2,"TUR");
+            statement.setString(3,"Adalar Sahili");
 
-            preparedStatement.executeUpdate();
-
-            System.out.println("Record added");
+            statement.executeUpdate();
         }
         catch (SQLException sqlException){
             dbHelper.getErrorMessage(sqlException);

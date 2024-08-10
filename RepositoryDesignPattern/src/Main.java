@@ -3,11 +3,5 @@
 public class Main {
     public static void main(String[] args) {
 
-        Customer customer = new Customer(1,"Fatih");
-        Product product = new Product(2,"Araba");
-        Validator validator = new Validator();
-
-        validator.validate(customer);
-        validator.validate(product);
     }
 }

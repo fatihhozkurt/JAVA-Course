@@ -5,27 +5,20 @@ public class Main {
     public static void main(String[] args) {
 
         Connection connection = null;
-        dbHelper helper = new dbHelper();
+        dbHelper db = new dbHelper();
 
-        try
-        {
-            connection = helper.getConnection();
+        try {
+            connection = db.getConnection();
             System.out.println("Connected");
         }
-        catch (SQLException exception)
-        {
-            helper.getErrorMessages(exception);
+        catch (SQLException exception){
+            db.getErrorMessage(exception);
         }
-        finally
-        {
-            try
-            {
+        finally {
+            try {
                 connection.close();
-                System.out.println("Disconnected");
-            }
-            catch (SQLException exception)
-            {
-                throw new RuntimeException(exception);
+            } catch (SQLException exception) {
+                db.getErrorMessage(exception);
             }
         }
     }

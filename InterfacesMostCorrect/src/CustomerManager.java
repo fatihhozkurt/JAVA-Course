@@ -1,15 +1,15 @@
 public class CustomerManager {
 
-    private ICustomerDal _customerDal;
+    private ICustomerDal customerDal;
 
     public CustomerManager(ICustomerDal customerDal)
     {
-        _customerDal = customerDal;
+        this.customerDal = customerDal;
     }
 
     public void addCustomer()
     {
-        _customerDal.addToDatabase();
+        System.out.println("Added");
+        customerDal.addToDatabase();
     }
-
 }

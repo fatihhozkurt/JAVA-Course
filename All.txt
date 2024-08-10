@@ -1,3 +1,7 @@
+Bu bir tekrar çalışması
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 DATA TYPES
 
 - Boolean 1 byte
@@ -5,6 +9,12 @@ DATA TYPES
 - Int 4 byte
 - Float 4 byte
 - Double 8 byte
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Multidimensional Arrays
+
+int[][] numbers = new int[][]{{1,2,3},{4,5,6}};
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -47,7 +57,7 @@ SOLİD -> S: Single Responsibility: Bir class, metot, if koşulu gibi yapılar s
 Main*
 productManager.add(product)
 
-ProductManager
+ProductManager*
 public void add(Product product)
 sout(product.getName)
 
@@ -61,9 +71,237 @@ Sadece getter yazarsam readonly olur.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Inheritance
+INHERITANCE
 
 Customer ve Employee sınıflarının name,surname gibi ortak değişkenleri var. Bunları Person sınıfında tutup onlara özel değişkenleri ve metotları kendi sınıflarında tutmak inheritance örneğidir.
 
-- public void krediHesapla(BaseKrediManager) metoduna
-- krediHesapla(new ÖğretmenKrediManager) gönderirsen miras olduğu için çalışır ve ÖğretmenKrediManager bilgileriyle çalışır
+//BaseKrediManager:
+-TarımKrediManager
+-ÖğretmenKrediManager
+Classlarını inherit etmektedir.
+
+KrediUI classında:
+public void hesapla(BaseKrediManager baseKrediManager)
+
+şeklinde ana sınıfın gönderildiği bir fonksiyon oluşturursam, main içerisinde bu fonksiyona istediğim kredi tipini göndererek hesaplatmış olurum.
+
+krediUI.hesapla(new ÖğretmenKrediManager())
+krediUI.hesapla(new TarımKrediManager())
+
+böylece yeni bir kredi türü eklendiğinde direkt hesaplamayı yaptırtabilirim.
+
+krediUI.hesapla(new AskerKrediManager())
+
+
+Yani: BaseKrediManager ana olduğu için farklı çocuklar için hesaplama yapmak istiyorsan çocukları onun referansıyla gönderebilirsin.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+POLYMORPHISM
+
+CustomerManager içerisinde:
+BaseLogger logger diyerek constructorda aldığın loggerı buna eşitler,
+add metodu içerisinde logger.log diyerek kullanırsın.
+
+Extend eden sınıflar override ediyor. Hangisini CustomerManager sınıfına yollarsam o child metodu çalışır.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+OVERRIDING
+
+BaseKrediManager[] baseKrediManagers = new BaseKrediManager[]{new TarımKrediManager, new OgrenciKrediManager, new OgretmenKrediManager}
+
+for(BaseKrediManager krediManagerIndex : baseKrediManagers)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ABSTRACT CLASS
+
+Base gizlenmek istendiğinde ve default metod kullanmak istenmediğinde kullanılır.
+Onu extend eden sınıflar içindeki abstract metodları override etmek zorundadır.
+
+Abstract olmayan sınıflar da olabilir. Aynı inheritance mantığı gibi ortak metodlar barındırır.
+
+BaseGameController baseGameController = new WomenGameController yine poly zaten
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+INTERFACE
+
+DAL, Businnes ve UI katmanları arasındaki geçiş bağımlılıkları engellemek adına Interfaceler aracılığıyla yapılır.
+
+Newlenemezler, içi boş metodlar tutarlar. Ancak:
+ICustomerDal customerDal = new OracleCustomerDal 
+şeklinde polymorpik olarak kullanılabilir
+
+CustomerManager içindeki constructorda kullanılacak nesneyi private yap. Dışarıdan erişilemesin
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+STATIC
+
+Static ifadeler program başlangıcında newlenir ve sonlanana kadar çalışmaya devam eder. Bu nedenle utility araçlar için kullanılır.
+
+Validator, ekleme çıkartma gibi işlemlerde ad soyad yaş id gibi alanların doğruluğunu kontrol etmek için kullanılan bir utilitydir.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PACKAGES
+
+Scanner scanner = new Scanner(System.in);
+String name = scanner.nextLine();
+
+Scanner bir built-in pakettir.
+
+
+Paketler gruplamaya arar (DAL,UI,Businness katmanlarını ayırmak için de kullanılır.)
+
+Matematik paketi:
+-Dörtİşlem (Classı)
+-Trigonometri (Classı)
+
+gibi.
+
+Bir kez yazılıp başka projelerde kullanma kolaylığı vardır.
+
+Başka paketten gelen classları newlemen gerekiyor
+
+import matematik.DortIslem;
+yerine
+import matematik.*; koyarsan paketteki her şeyi getirir
+
+Dortİşlem dortIslem = new Dortİşlem();
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ARRAYLIST
+
+Dizilerin gelişmiş halidir. Tip güvensiz veri tutabilir ama tip güvenli tercih edildiği için genericlerle<> birlikte kullanılır. Default olarak Obje tutar.
+
+.add(içerik)
+.set(değişecek index, yeni içerik)
+.remove(içerik ya da index)
+.clear()
+Collections.sort(sehirlerarrayi)
+
+ArrayList arrayList = new ArrayList şeklinde newlemek lazım.
+
+for(Object i : sayilar)
+{
+sout(i);
+}
+
+Generilerle kullanarak:
+ArrayList<String> dersem String listesi olur.
+
+İleri seviye kullanımda Classları tutabiliriz:
+ArrayList<Customer> customers = new Arraylist<Customer>();
+
+customers.add(new Customer(1,Fatih,Özkurt));
+
+her customer nesnesini bu şekilde Customer arraylisti içinde tutabiliriz
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EXCEPTION HANDLING
+
+Veri tabanına bağlandık ve hata oluştu. O bağlantıyı hata alsan da almasan da işin bittikten sonra her türlü kapatmamız gerekir. Finally kullanılır.
+
+Exceptionlar kodlarımız ile kontrol altında tutabildiğimiz şeylerdir. (IO Exception, AWT Exception gibi)
+Errorlar ise kodlarımız ile kontrol altında tutamadığımız şeylerdir. (IO Error, VM Error, AWT Error gibi)
+
+Yaptığım bir paketi başka yerde kullanacağım ya da kullanacakları zaman hatayı ona (paketin kullanılacağı yere)fırlatmaya yarıyor.
+
+Farklı hata türleri için birden fazla catch yazılabilir
+
+KENDİ EXCEPTIONUNU YAZMAK?
+
+Yeni bir class açıp içerisine consrtuctor ile bir mesaj al. Bu class Exception ana classını extend etsi
+
+getMessage built-in metodunu Override ederek aldığın mesaj return et.
+Kullan
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+GENERICS
+
+Genericler birbirine benzeyen operasyonları gerçekleştirirken tip güvenli çalışmak için kullanılır.
+
+Bir veri tabanına ekleme işlemi aynıdır ancak:
+-Customer
+-Product
+farklı tiplerini ekleyebilirim. T tipinde bir generic belirlersem Customer mı Product mı eklediğim önemli olmaz. Sadece ekleme işlemini yapar.
+
+Kullandığımız T = type demek
+
+MyList<T> classı herhangi bir tip alabilir demek
+
+MyList<String> cities = new demek MyList<String> de olabilir
+
+MyList<int> numbers da,
+
+MyList<Customer> customers da.
+
+MyList Classı içerisinde bulunan add metodu
+add(T object) ile oluşturulur ve T hangi tip olursa o tipte listeye ekleme yapar.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+REPOSITORY DESIGN PATTERN (Generics)
+
+Repository Design paterni veri tabanı işlemleri için kullanılır.
+
+IEntityReposityory<T extends IEntity> içerisinde bulunan:
+add(T entity)
+delete(T entity)
+update(T entity)
+
+işlemleri bu şekilde kullanılarak onu implement eden CustomerDal ve ProductDal sınıflarının Override edeceği metodlara istediklerini gönderebilmelerini sağlar.
+
+Bunun için CustomerDal implements IEntityRepository<Customer> diyerek kullanacağı metodların tipini seçmelidir.
+
+IEntity ise gruplama için kullanılır.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+GENERIC METODLAR
+
+public static <T extends IEntity> void validator(T entity)
+{}
+
+şeklinde metodlar da generic olabilir. İçine gönderdiğimiz tip farklı olabilir.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+JDBC
+
+SELECT
+***********************************************************************************************************************************
+Select işlemi resultSet gerektirirken diğer işlemler gerektirmez.
+
+ArrayList<City> ile kullanacaksam while içinde cities.add(new Cities(resultSet.getString("Name"),resultSet("CountryCode"),...));
+***********************************************************************************************************************************
+
+INSERT
+***********************************************************************************************************************************
+- Statement yerine PreparedStatement kullanılır.
+- ResultSet yoktur.
+- ExecuteUpdate ile çalıştırılır.
+- Values yerine ? ? ? yazabiliriz 
+- statement.setString(kaçıncı soru işareti, değeri)
+- statement.setString(1,"Fatih")
+***********************************************************************************************************************************
+
+UPDATE
+***********************************************************************************************************************************
+Sadece sorgu değişiyor
+***********************************************************************************************************************************
+
+DELETE
+***********************************************************************************************************************************
+Sadece sorgu değişiyor
+***********************************************************************************************************************************
+
+The End.

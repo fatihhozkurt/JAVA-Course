@@ -27,7 +27,7 @@ Başına SET SQL_SAFE_UPDATES = 0; koy
 
 id'sinden güncelleseydik sorun çıkmazdı.
 
-delete from city where = id = 1080;
+delete from city where id = 1080;
 kayıt siliyor.
 
 File -> Project Structure -> Dependencies -> Program Filex x86 -> MySQL -> Connector -> JAR seçerek:

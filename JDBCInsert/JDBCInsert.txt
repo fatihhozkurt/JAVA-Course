@@ -3,7 +3,7 @@ select işleminde:
 -connection aç
 -statement = connection.createStatement
 ile statement yarat
--resultSet = statement.executeQuery(sql)
+-resultSet = statement.executeQuery(sql)	
 ile sql i çalıştır
 -resultSet.getString(colName)
 ile istediğin columnu getir

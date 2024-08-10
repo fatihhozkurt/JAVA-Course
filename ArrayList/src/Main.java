@@ -3,26 +3,21 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList sayilar = new ArrayList();
+        ArrayList numbers = new ArrayList();
 
-        sayilar.add(15);
-        sayilar.add(225);
-        sayilar.add("Fatih");
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+        numbers.add(5);
 
-        System.out.println(sayilar.size());
+        numbers.set(3,2);
 
-        sayilar.set(0, 1000);
+        numbers.remove(4);
 
-        sayilar.remove(2);
-
-        sayilar.clear();
-
-        for (Object sayilarIndex : sayilar)
+        for (Object numbersIndex : numbers)
         {
-            System.out.println(sayilarIndex);
+            System.out.println(numbersIndex);
         }
-
-
-
     }
 }

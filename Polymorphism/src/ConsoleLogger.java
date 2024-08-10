@@ -1,7 +1,9 @@
 public class ConsoleLogger extends BaseLogger {
 
-    public void log(String logMessage) {
-        System.out.println("Logged to Console : " + logMessage);
+    @Override
+    public void log(String logMessage)
+    {
+        System.out.println("Console Log: " + logMessage);
     }
 
 }

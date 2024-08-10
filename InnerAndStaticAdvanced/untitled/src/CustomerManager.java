@@ -1,37 +1,35 @@
 public class CustomerManager {
 
-    public void  add(Customer customer)
-    {
-        if (CustomerValidator.valid(customer))
+        public void add(Customer customer)
         {
-            System.out.println(customer.get_name() + " " + customer.get_surname() +  " eklendi");
+            if (CustomerValidator.valid(customer)) {
+                System.out.println(customer.get_name() + " added.");
+            }
+            else {
+                System.out.println("eklenemedi");
+            }
+
         }
-        else
-        {
-            System.out.println(customer.get_name() + " " + customer.get_surname() + " eklenemedi");
-        }
-    }
 
     public void delete(Customer customer)
     {
         if (CustomerValidator.valid(customer)) {
-            System.out.println(customer.get_name() + " " + customer.get_surname() + " silindi");
+            System.out.println(customer.get_name() + " deleted.");
         }
-        else
-        {
-            System.out.println(customer.get_name() + " " + customer.get_surname() + " silinemedi");
+        else {
+            System.out.println("eklenemedi");
         }
+
     }
 
     public void update(Customer customer)
     {
-        if (CustomerValidator.valid(customer))
-        {
-            System.out.println(customer.get_name() + " " + customer.get_surname() +  " güncellendi");
+        if (CustomerValidator.valid(customer)) {
+            System.out.println(customer.get_name() + " updated.");
         }
-        else
-        {
-            System.out.println(customer.get_name() + " " + customer.get_surname() + " güncellenemedi");
+        else {
+            System.out.println("eklenemedi");
         }
+
     }
-}
+    }

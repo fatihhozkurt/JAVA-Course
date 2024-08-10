@@ -1,14 +1,15 @@
 public class InsufficientBalanceException extends Exception{
 
-    String _message;
+    String exceptionMessage;
 
-    public InsufficientBalanceException(String message)
+    public InsufficientBalanceException(String exceptionMessage)
     {
-        _message = message;
+        this.exceptionMessage = exceptionMessage;
     }
 
     @Override
-    public String getMessage() {
-        return _message;
+    public String getMessage()
+    {
+        return exceptionMessage;
     }
 }

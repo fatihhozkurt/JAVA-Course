@@ -7,20 +7,19 @@ public class Main {
     public static void main(String[] args) {
 
         Connection connection = null;
-        DBHelper dbHelper = new DBHelper();
         Statement statement = null;
         ResultSet resultSet = null;
+        DBHelper dbHelper = new DBHelper();
 
         try {
             connection = dbHelper.getConnection();
             System.out.println("Connected");
-
             statement = connection.createStatement();
-            resultSet = statement.executeQuery("select * from city where name = 'Ardahan'");
+            resultSet = statement.executeQuery("select * from city");
 
             while (resultSet.next())
             {
-                System.out.println("City Name: " + resultSet.getString("name"));
+                System.out.println("Name: " + resultSet.getString("Name"));
             }
         }
         catch (SQLException exception){
@@ -28,12 +27,16 @@ public class Main {
         }
         finally {
             try {
+                statement.close();
                 connection.close();
-                System.out.println("Disconnected");
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
+                System.out.println("Connection closed.");
             }
+            catch (SQLException exception){
+                dbHelper.getErrorMessage(exception);
+            }
+
         }
+
 
     }
 }

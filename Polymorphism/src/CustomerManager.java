@@ -1,15 +1,21 @@
 public class CustomerManager {
 
-    BaseLogger _logger;
+    BaseLogger baseLogger;
 
-    public CustomerManager(BaseLogger logger)
+    public CustomerManager(BaseLogger baseLogger)
     {
-        _logger = logger;
+        this.baseLogger = baseLogger;
     }
 
     public void add()
     {
-        System.out.println("Customer added");
-        _logger.log("log message");
+        System.out.println("Added");
+        baseLogger.log("Add method log message");
+    }
+
+    public void delete()
+    {
+        System.out.println("Deleted");
+        baseLogger.log("Delete method log message");
     }
 }

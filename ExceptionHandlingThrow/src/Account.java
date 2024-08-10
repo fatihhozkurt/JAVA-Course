@@ -1,49 +1,46 @@
 public class Account {
 
-    private final int _id;
-    private String _name;
-    private String _surname;
-    private final String _tc;
-    private float _balance;
+    private int id;
+    private String name;
+    private String surname;
+    private double balance;
 
-    public Account(int id, String name, String surname, String tc, float balance)
-    {
-        _id = id;
-        _balance = balance;
-        _surname = surname;
-        _name = name;
-        _tc = tc;
+    public Account(int id, String name, String surname, double balance) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.balance = balance;
     }
 
-    public int get_id() {
-        return _id;
+    public int getId() {
+        return id;
     }
 
-    public String get_tc() {
-        return _tc;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String get_name() {
-        return _name;
+    public String getName() {
+        return name;
     }
 
-    public void set_name(String name) {
-        _name = name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String get_surname() {
-        return _surname;
+    public String getSurname() {
+        return surname;
     }
 
-    public void set_surname(String surname) {
-        _surname = surname;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
-    public float get_balance() {
-        return _balance;
+    public double getBalance() {
+        return balance;
     }
 
-    public void set_balance(float balance) {
-        _balance = balance;
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 }

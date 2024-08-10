@@ -1,28 +1,15 @@
 public class Customer implements IEntity{
 
-    public Customer(int id, String name)
-    {
-        _id = id;
-        _name = name;
+    int id;
+    String name;
+    String surname;
+
+    public Customer(int id, String name, String surname) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
     }
 
-    private int _id;
-    private String _name;
 
-    public int get_id() {
-        return _id;
-    }
-
-    public void set_id(int id) {
-        _id = id;
-    }
-
-    public String get_name() {
-        return _name;
-    }
-
-    public void set_name(String name) {
-        _name = name;
-    }
 }
 

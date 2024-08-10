@@ -1,26 +1,25 @@
 public class AccountManager {
 
-    public void deposit(Account account, float amount)
+    public void deposit(Account account, double amount)
     {
-        account.set_balance((account.get_balance() + amount));
-
-        System.out.println(amount + " TL hesaba yatırıldı." + "\n" + "Yeni hesap bakiyesi: " + account.get_balance());
+        account.setBalance(account.getBalance() + amount);
+        System.out.println("Deposited. \n New Balance: " + account.getBalance());
     }
 
-    public void withdraw(Account account, float amount) throws InsufficientBalanceException {
-        if (account.get_balance()>=amount)
+    public void withdraw(Account account, double amount) throws InsufficientBalanceException {
+        if ((account.getBalance() - amount) > 0)
         {
-            account.set_balance(account.get_balance() - amount);
-            System.out.println("Para çekme işlemi başarılı." + "\n" + "Yeni hesap bakiyesi: " + account.get_balance());
+            account.setBalance(account.getBalance() - amount);
+            System.out.println("Withdrawed \n New Balance: " + account.getBalance());
         }
         else
         {
-            throw new InsufficientBalanceException("Bakiye yetersiz!");
+            throw new InsufficientBalanceException("Invalid amount!");
         }
     }
 
-    public void getBalance(Account account)
+    public void getAccountInfo(Account account)
     {
-        System.out.println("Hesap bakiyesi: " + account.get_balance());
+        System.out.println(account.getId()+ "\n" + account.getName() + "\n" + account.getSurname() + "\n" + account.getBalance());
     }
 }

@@ -14,5 +14,7 @@ public class Main {
         product1.set_code("234a");
 
         System.out.println("Name : " + product1.get_name() + "\n" + "Code: " +  product1.get_code() + "\n" + "Amount: " +  product1.get_amount() + "\n" + "ID: " + product1.get_id() + "\n" + "Description: " + product1.get_description() + "\n" + "Price: " + product1.get_price());
+
+        productManager1.addProduct(product1);
     }
 }

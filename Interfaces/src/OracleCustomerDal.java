@@ -1,7 +1,8 @@
 public class OracleCustomerDal implements ICustomerDal{
 
+
     @Override
-    public void Add() {
-        System.out.println("Added: Oracle");
+    public void add() {
+        System.out.println("Added to Oracle DB");
     }
 }

@@ -1,7 +1,8 @@
 public class PostgreSQLCustomerDal implements ICustomerDal{
 
+
     @Override
-    public void Add() {
-        System.out.println("Added: Postgre SQL");
+    public void add() {
+        System.out.println("Added to PostgreSQL DB");
     }
 }

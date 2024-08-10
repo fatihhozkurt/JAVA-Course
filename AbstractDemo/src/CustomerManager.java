@@ -1,14 +1,18 @@
 public class CustomerManager{
 
-    public BaseDatabaseManager _baseDatabaseManager;
+    BaseDatabaseManager baseDatabaseManager;
 
     public CustomerManager(BaseDatabaseManager baseDatabaseManager)
     {
-        _baseDatabaseManager = baseDatabaseManager;
+        this.baseDatabaseManager = baseDatabaseManager;
     }
 
-    public void getCustomers()
+    public void getCustomer()
     {
-        _baseDatabaseManager.getData();
+        System.out.println("Customer info");
+        baseDatabaseManager.getData();
+
     }
+
+
 }

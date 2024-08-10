@@ -1,6 +1,7 @@
 public class BaseLogger {
 
-    public void log(String logMessage) {
-        System.out.println("Default log : " + logMessage);
+    public void log(String logMessage)
+    {
+        System.out.println("Default Log: " + logMessage);
     }
 }

@@ -8,43 +8,38 @@ public class Main {
     public static void main(String[] args) {
 
         Connection connection = null;
-        DBHelper dbHelper = new DBHelper();
         Statement statement = null;
         ResultSet resultSet = null;
-
+        DBHelper dbHelper = new DBHelper();
+        String sql = "select * from city";
 
         try {
             connection = dbHelper.getConnection();
             System.out.println("Connected");
-
             statement = connection.createStatement();
-            resultSet = statement.executeQuery("select * from city where name = 'Ardahan'");
+            resultSet = statement.executeQuery(sql);
 
             ArrayList<Cities> cities = new ArrayList<Cities>();
 
             while (resultSet.next())
             {
-                cities.add(new Cities(resultSet.getString("Name"), resultSet.getString("CountryCode"), resultSet.getString("District")));
-                cities.add(new Cities(resultSet.getString("Name"), resultSet.getString("CountryCode"), resultSet.getString("District")));
-                cities.add(new Cities(resultSet.getString("Name"), resultSet.getString("CountryCode"), resultSet.getString("District")));
+                cities.add(new Cities(resultSet.getString("Name"),resultSet.getString("CountryCode"),resultSet.getString("District")));
+                cities.add(new Cities(resultSet.getString("Name"),resultSet.getString("CountryCode"),resultSet.getString("District")));
+                cities.add(new Cities(resultSet.getString("Name"),resultSet.getString("CountryCode"),resultSet.getString("District")));
             }
-
-            System.out.println(cities.size());
         }
-        catch (SQLException sqlException){
-            dbHelper.getErrorMessage(sqlException);
+        catch (SQLException exception){
+            dbHelper.getError(exception);
         }
         finally {
             try {
+                statement.close();
                 connection.close();
                 System.out.println("Disconnected");
             }
-            catch (SQLException sqlException) {
-                dbHelper.getErrorMessage(sqlException);
+            catch (SQLException exception){
+                dbHelper.getError(exception);
             }
         }
-
-
-
     }
 }

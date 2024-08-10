@@ -3,7 +3,9 @@
 public class Main {
     public static void main(String[] args) {
 
-        CustomerManager customerManager = new CustomerManager(new OracleDatabaseManager());
-        customerManager.getCustomers();
+        CustomerManager customerManager = new CustomerManager(new PostgreSQLDatabaseManager());
+
+        customerManager.getCustomer();
+
         }
 }

@@ -1,4 +1,4 @@
 public interface ICustomerDal {
 
-    void Add();
+    public void add();
 }
