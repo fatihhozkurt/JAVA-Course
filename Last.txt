@@ -1,0 +1,160 @@
+Rest api insert update delete select gibi işlemleri yapıp bu işlemleri front endde kullandığımız ortamdır.
+
+Rest apiler %99 json (javascript object notation) formattadır. JSON backend ile frontend arasındaki veri değişimini kolaylaştıran bir veri değişim formatıdır.
+--------------------------------------------------------------------
+Spring boot bize hali hazırda tomcat maven gibi bir web projesi için gerekli ortamları sağlayan bir teknolojidir
+---------------------------------------------------------------------
+MVC Model View Controller bir Tasarım Desenidir. Projelerin spagetti koda dönüşmemesi için kullanılır.
+
+- View: Html gibi arayüz (Ziyaretçinin gördüğü ui sayfalarıdır)
+
+-Model: Verileri işleyeceği yapı (Uygulamada kullanacağım bütün verileri modelda işlerim. Eklerim görüntülerim güncellerim ve silerim )
+
+-Controller: Mantık (Uyggulamanın kontrol ve karar mekanizmasıdır hangi bilgilerin kullanıcıya nasıl gösterileceği, nasıl işleneceği)
+
+1) Kullanıcı istekte bulunduğunda (fatih.com/products is productsController olacak) Controllera gider ve Controller değerlendirir
+2) Bir bilginin işlenmesi gerekiyse bunu modela aktarır ve model bilgiyi controllera geri döndürür.
+3) Bilgiler işlendikten sonra view vasıtasıyla kullanıcıya gösterir
+
+Bu bir katmanlı mimarı değildir tasarım desenidir.
+-------------------------------------------------------------------
+ProductsController sınıfının Restful api olması için:
+-@RestController annotation eklenmeli
+
+Basit bir metod:
+@GetMapping("/")   //Biz hiçbir şey yapmasak da uygulama çalışınca bu gelecek
+-public String get()
+{
+	return Laptop;
+}
+
+Sonucunda Laptop yazısı ekranda görünecek.
+
+Error page gelirse 8080 biri tarafından kullanılıyor olabilir.
+
+GetMapping("/products")
+-public String getProducts()
+{
+	return "Laptop2";
+}
+
+Böyle bir eklemeden sonra processi durdurup refresh etmek gerekiyor
+**************************************************************************************
+pom.xml içerisine Spring Boot Dev Tools konfigürasyonu yapıyoruz
+<dependency>
+	<groupID>
+		org.springframework.boot
+	</groupID>
+	<artifactID>
+		spring-boot-devtools
+	</artifactID>
+</dependency>
+
+eklediğim zaman ctrl + s dediğim zaman threadi durdurmaya gerek yok.
+*************************************************************************************
+
+Yeni proje açıyoruz. JPA ve Hibernate i monte edeceğiz
+
+application.properties file dosyasını ekledim.
+-MySQL username, password, url gibi bilgileri buraya koyup enjecte edeceğim.
+
+- spring.datasource.url = jdbc:mysql://localhost:3306/world
+- spring.datasource.username = root
+- spring.datasource.password = 18668798
+
+***************************************************************************************
+
+Projenin mimari yapısında
+
+Veri tabanı nesneleri Entities katmanında tutulur.
+Entities içerisinde City sınıfı bulunur. (city tablosuna karşılık gelecek)
+
+Fieldımızı constructorımızı getter setterlarımızı oluşturduk. Sıra veri tabanına bağlamakta:
+
+-@Entity
+-@Table(name = "City")
+-@Id     //Primary key olduğunu gösterir
+-@GeneratedValue(strategy = GenerationType.IDENTITY)  //Auto increment için
+-Column(name = "CountryCode")
+
+javax.persistence.* paketi sende yoksa pom.xml içerisine:
+
+<dependency>
+	<groupID> 
+		org.springframework.boot
+	</groupID>
+	<artifactID>
+		spring-boot-starter-data-jpa
+	</artifactID>
+</dependency>
+
+şeklinde ekleyebilirim.
+
+***************************************************************************************
+
+OW SHIT LETS GO GOD DAMN
+
+Kurumsal Mimaride
+
+3) DAL/DDAO katmanımızda veri erişm işlemlerini gerçekleştiririz.
+-Hybernate ve JDBC kodları burada yazlır.
+
+2) Businness/Service katmanımızda iş kurallarını yazarız.
+-Ehliyet vericem, ehliyet için db ye bağlanıp ilk yardımdan 70 almış mı, motordan 70 almış mı gibi kontroller.
+- Restful yapı
+- Service mimarisi burada yazılır.
+
+! Businnesstaki iş kodları ve Rest kodları yine ayrı katmanlarda yazılır ki farklı bir api teknolojiye geçince sorun olmasın. SOLID.
+
+1) UI katmanında html css js kodlarını yazığımız yer
+
+Bu katmanlar Interfaceler ile haberleşecek.
+
+****************************************************************************************
+
+Yeni DataAccess package ile DAL ı oluşturalım
+
+-ICityDal
+Şimdi operasyonları yazacağım.
+
+Arraylist<City> getAll();
+void add(City city);
+void update(City cit);
+void delete(City city);
+
+!City Entities adlı başka pakette olduğu için import etmem gerekir.
+*******************************************************************************************
+
+Interface i hibernate kodu ile doldurmam gerekiyor.
+
+class HibernateCityDal oluştur.   //Hibernae yerine farklı bir teknoloji kullanırsak diye.
+
+implement override ettikten sonra hibernate getirirken JPA kullanılır.
+
+JPA bir standarttır. Hybernate ve diğer tekolojiler arasında geçiş yapmayı sağlar. Session factory cart curt JPA ile kendi geliyor.
+
+Nasıl yapıyoruz?
+
+Constructor ile.
+-private EntityManager entityManager;   //paketini al
+(jpa = java persitence)
+-constructor oluştur üzerine @Autowired koy (entityManagera Hibernate inectionı yapacak)
+
+getAll metodunu tamamlayalım.
+
+@Transactional   //Session aça kapatma işlemlerini kendisi yapması için (UOW)
+//Aspect oriented programming kod build olunca önüne arkasına transaction sessin açma kapatma kodlarını kendi ekliyor.
+public List<City> getAll()
+{
+	Session session = entityManager.unwrap(Session.class) 
+	//Bir session nesnesi oluşturarak JPA gerekli injectionları yapıyor
+
+	//queryi yaz
+
+	List<City> cities = session.createQuery("from City",City.class).getResultList();
+
+	//Bir sorguyu çalıştırmış ve sonuçları cities listesine atmış olduk.
+
+	return cities;
+}
+
